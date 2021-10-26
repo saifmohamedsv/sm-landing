@@ -1,13 +1,42 @@
+@font-face {
+  font-family: "BoldNetflix";
+  src: url("./assets/fonts/NetflixSansBold.ttf");
+}
+@font-face {
+  font-family: "RegularNetflix";
+  src: url("./assets/fonts/NetflixSansRegular.ttf");
+}
+@font-face {
+  font-family: "MediumNetflix";
+  src: url("./assets/fonts/NetflixSansMedium.ttf");
+}
+@font-face {
+  font-family: "LightNetflix";
+  src: url("./assets/fonts/NetflixSansLight.ttf");
+}
+@font-face {
+  font-family: "IconNetflix";
+  src: url("./assets/fonts/NetflixSansIcon.ttf");
+}
+@font-face {
+  font-family: "ThinNetflix";
+  src: url("./assets/fonts/NetflixSansThin.ttf");
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
