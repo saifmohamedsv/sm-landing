@@ -4,7 +4,7 @@ import navLogo from "../assets/icons/logo.png";
 const Container = styled.div`
   position: relative;
   width: 100%;
-  padding: 32px 150px;
+  padding: 24px 150px;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -30,6 +30,8 @@ const LogoImage = styled.img`
 const LogoText = styled.h1`
   font-size: 32px;
   font-family: "BoldNetflix";
+  margin: 0 !important;
+  cursor: pointer;
   color: #643fdb;
   letter-spacing: 2px;
   @media screen and (max-width: 768px) {

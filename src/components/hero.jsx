@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import PhoneImage from "../assets/photos/heroImage.png";
+import { Row, Col } from "antd";
 const Container = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
-  padding: 20px 140px;
+  height: calc(100vh - 95px);
+  padding: 12px 140px;
   @media screen and (max-width: 768px) {
     padding: 32px 24px;
+    height: 100%;
   }
 `;
 const Gradient = styled.div`
@@ -15,10 +17,10 @@ const Gradient = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 95px);
   z-index: -1;
   background: linear-gradient(269.86deg, #b29aff 1.77%, #643fdb 99.8%);
-  clip-path: polygon(0 0, 100% 0, 100% 65%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
 `;
 const ContentContainer = styled.div`
   width: 100%;
@@ -29,27 +31,28 @@ const ContentContainer = styled.div`
   flex-direction: row;
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    gap: 24px;
+    gap: 48px;
   }
 `;
 const HeroData = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 `;
 const HeroTitle = styled.h1`
-  font-size: 50px;
-  line-height: 140%;
+  font-size: 3.6vw;
   font-family: "BoldNetflix";
   color: #fff;
+  margin: 0 !important;
   @media screen and (max-width: 768px) {
     font-size: 32px;
   }
 `;
 const HeroSubTitle = styled.h1`
-  font-size: 20px;
+  font-size: 1.2vw;
   line-height: 140%;
+  margin: 0 !important;
   font-family: "ThinNetflix";
   color: #fff;
   text-transform: capitalize;
@@ -64,6 +67,7 @@ const Button = styled.button`
   font-family: "MediumNetflix";
   width: 180px;
   height: 50px;
+  margin-top: 32px;
   background-color: #fff;
   color: #643fdb;
   border: 1px solid #fff;
@@ -75,10 +79,9 @@ const Button = styled.button`
   }
 `;
 const HeroImage = styled.img`
-  /* height: 100%; */
-  width: 280px;
+  height: 100%;
   @media screen and (max-width: 768px) {
-    width: 180px;
+    width: 50%;
   }
 `;
 function hero() {
