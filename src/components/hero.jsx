@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import PhoneImage from "../assets/photos/heroImage.png";
-import { Row, Col } from "antd";
 const Container = styled.div`
   position: relative;
   width: 100%;
-  height: calc(100vh - 95px);
+  height: calc(100vh - 100px);
   padding: 12px 140px;
   @media screen and (max-width: 768px) {
     padding: 32px 24px;
@@ -32,6 +31,7 @@ const ContentContainer = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     gap: 48px;
+    margin-top: 30%;
   }
 `;
 const HeroData = styled.div`
@@ -40,33 +40,41 @@ const HeroData = styled.div`
   flex-direction: column;
   gap: 8px;
 `;
-const HeroTitle = styled.h1`
+const HeroName = styled.h1`
   font-size: 3.6vw;
   font-family: "BoldNetflix";
   color: #fff;
   margin: 0 !important;
   @media screen and (max-width: 768px) {
-    font-size: 32px;
+    font-size: 6vw;
   }
 `;
-const HeroSubTitle = styled.h1`
+const HeroTitle = styled.span`
+  font-size: 2vw;
+  font-family: "BoldNetflix";
+  color: #fff;
+  @media screen and (max-width: 768px) {
+    font-size: 6vw;
+  }
+`;
+const HeroSubTitle = styled.span`
   font-size: 1.2vw;
   line-height: 140%;
-  margin: 0 !important;
   font-family: "ThinNetflix";
   color: #fff;
   text-transform: capitalize;
   @media screen and (max-width: 768px) {
-    font-size: 16px;
+    font-size: 3vw;
   }
 `;
 const Button = styled.button`
   border: none;
   line-height: 140%;
-  font-size: 13px;
+  font-size: 1vw;
   font-family: "MediumNetflix";
-  width: 180px;
-  height: 50px;
+  max-width: 220px;
+  min-height: 50px;
+  padding: 12px 32px;
   margin-top: 32px;
   background-color: #fff;
   color: #643fdb;
@@ -77,11 +85,16 @@ const Button = styled.button`
     background-color: transparent;
     color: #fff;
   }
+  @media screen and (max-width: 768px) {
+    margin-top: 12px;
+    max-width: 180px;
+    font-size: 3vw;
+  }
 `;
 const HeroImage = styled.img`
   height: 100%;
   @media screen and (max-width: 768px) {
-    width: 50%;
+    width: 75%;
   }
 `;
 function hero() {
@@ -90,13 +103,16 @@ function hero() {
       <Gradient />
       <ContentContainer>
         <HeroData>
-          <HeroTitle>Sports Sporsepeti</HeroTitle>
-          <HeroTitle>The Best App For Sports booking</HeroTitle>
+          <HeroName>Sports Sporsepeti</HeroName>
+          <HeroTitle>
+            Spor Tesisleri ile Spor Yapmak İsteyenleri Bir Araya Getiren
+            Uygulama
+          </HeroTitle>
           <HeroSubTitle>
-            Search now and book your Pitch, track, soccer court <br /> and much
-            more instantly
+            Arkadaşlarını çağır, spor sahasını ayırt, anılarını paylaş ve çok
+            daha fazlası için
           </HeroSubTitle>
-          <Button>Get Started</Button>
+          <Button>Şimdi Başla</Button>
         </HeroData>
         <HeroImage src={PhoneImage} />
       </ContentContainer>

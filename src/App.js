@@ -1,10 +1,14 @@
 import {
   About,
+  AppScreenShot,
   Features,
   Hero,
   HowItWork,
   Navbar,
+  Sports,
   Statistics,
+  Footer,
+  Testimonials,
 } from "./components";
 
 function App() {
@@ -16,6 +20,10 @@ function App() {
       <Features />
       <HowItWork />
       <Statistics />
+      <AppScreenShot />
+      <Sports />
+      <Testimonials />
+      <Footer />
     </div>
   );
 }

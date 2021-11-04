@@ -23,27 +23,32 @@ const Header = styled.div`
   align-items: center;
   justify-content: center;
 `;
-const AboutTitle = styled.h1`
+const AboutTitle = styled.span`
   margin: 0 !important;
-
-  font-size: 30px;
+  font-size: 1.953125vw;
   color: #1c1243;
   font-family: "MediumNetflix";
   text-align: center;
   text-transform: uppercase;
   line-height: 40px;
+  @media screen and (max-width: 768px) {
+    font-size: 5vw;
+  }
 `;
 const Divider = styled.img`
   width: 120px;
 `;
 const SubTitle = styled.p`
-  font-size: 14px;
+  font-size: 1vw;
   font-family: "RegularNetflix";
   color: #686868;
-  line-height: 20px;
+  line-height: 140%;
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    font-size: 4vw;
+  }
 `;
 const Content = styled.div`
   margin-top: 32px;
@@ -69,27 +74,39 @@ const ContentImage = styled.img`
 const ContentDetails = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 38px;
+  gap: 24px;
   text-align: start;
   width: 100%;
   height: 100%;
 `;
-const DetailsTitle = styled.h1`
-  font-size: 24px;
+const DetailsTitle = styled.span`
+  font-size: 1.5625vw;
   color: #1c1243;
-  font-family: "RegularNetflix";
+  font-family: "BoldNetflix";
+  margin: 0 !important;
+  @media screen and (max-width: 768px) {
+    font-size: 4.8vw;
+  }
 `;
 const DetailsSubTitle = styled.p`
-  font-size: 14px;
+  font-size: 1vw;
   color: #686868;
-  max-width: 520px;
-  line-height: 20px;
+  max-width: 75%;
+  line-height: 140%;
+  margin: 0 !important;
   font-family: "RegularNetflix";
+  @media screen and (max-width: 768px) {
+    font-size: 3.8vw;
+    max-width: 100%;
+  }
 `;
 const Butttons = styled.div`
   display: flex;
   gap: 24px;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 const Button = styled.img`
   cursor: pointer;
@@ -97,34 +114,35 @@ const Button = styled.img`
 `;
 function About() {
   return (
-    <Container>
+    <Container id="About">
       <Header>
-        <AboutTitle>About Our App</AboutTitle>
+        <AboutTitle>UYGULAMAMIZ HAKKINDA</AboutTitle>
         <Divider src={divider} />
       </Header>
       <SubTitle>
-        The sports app's mission is to bring people and service sports companies
-        together by enabling them to easily book their services online no matter
-        where they are or when they want to book!
+        Sporsepeti ile kolayca rezervasyon yapabilir, anılarını sosyal medya
+        kısmında paylaşabilir ve istatistiklerine ulaşabilirsin
       </SubTitle>
       <Content>
         <ContentImage src={phoneImages} />
         <ContentDetails>
-          <DetailsTitle>Take a Look Around our App </DetailsTitle>
+          <DetailsTitle>Uygulamamıza Bir Göz Atın</DetailsTitle>
           <DetailsSubTitle>
-            Sport app" is Turkey’s leading search and booking platform for
-            recreational sports. Our mission is making it easier for everyone to
-            play sport, and increasing the utilization of facilities as a
-            result. We are proud to welcome the early risers, last-minuters,
-            part-timers, full-timers, first-timers to the "sport app" sporting
-            community. We know the urban work-life balance isn’t always easy to
-            juggle and our service takes the hassle away from finding places to
-            play. Sport plays a pivotal role in bringing people together,
-            sharing moments, and enhancing well-being. Find your play. Go from
-            thought to sport. A few taps and swipes on our app transports people
-            to sports facilities where they can bang in a goal or swipe at a
-            karting amongst friends. We make playing sport simple across turkey
-            . Have you made your account in "sport app "?
+            Sporsepeti Türkiye’de spor tesislerine bir çok branşta rezervasyon
+            yapmanızı sağlayacak bir uygulamadır.
+            <br />
+            <br />
+            Halısaha maçı, paintball maçı, karting yarışı ve lasertag gibi
+            aktiviteler yapmak istediğinizde bir çok sorunla karşılaşıyorsunuz.
+            Spor sahası bul, hangi saatler müsaitmiş sor, arkadaş bul,… derken
+            zamanınızdan gidiyor. Sporsepeti sayesinde tek kişi bile olsanız
+            başkaları ile maçlara katılabilir, takımınızla maçlara katılım
+            gösterebilir veya tüm sahayı rezerve edebilirsiniz.
+            <br />
+            <br />
+            Sizin sevdiğiniz branşları seven kişileri takip edebilir, resim veya
+            video paylaşabilirsiniz. Maç sonunda istatistiklerinize bakıp
+            gelişiminizi artırabilirsiniz.
           </DetailsSubTitle>
           <Butttons>
             <Button src={AppleStore} />

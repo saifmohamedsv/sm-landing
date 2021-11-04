@@ -4,3 +4,7 @@ export { default as About } from "./About";
 export { default as Features } from "./Features";
 export { default as HowItWork } from "./HowItWork";
 export { default as Statistics } from "./Statistics";
+export { default as AppScreenShot } from "./AppScreenShot";
+export { default as Sports } from "./Sports";
+export { default as Testimonials } from "./Testimonials";
+export { default as Footer } from "./Footer";

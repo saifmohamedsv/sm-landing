@@ -1,27 +1,27 @@
 import { Col, Row } from "antd";
 import React from "react";
 import styled from "styled-components";
-import ImageWallpaper from "../assets/photos/pexels-thisisengineering-3861958.jpg";
+import ImageWallpaper from "../assets/photos/pexels-thisisengineering-3861958.png";
 const Stats = [
   {
     id: 1,
     data: "13+",
-    title: "Downloads",
+    title: "Uygulamanın İndirilmesi",
   },
   {
     id: 2,
     data: "12,483",
-    title: "Total Users",
+    title: "Kayıtlı Kullanıcılar",
   },
   {
     id: 3,
     data: "45+",
-    title: "Total Facilities",
+    title: "Kayıtlı Spor Tesisi ",
   },
   {
     id: 4,
     data: "45+",
-    title: "Total App Rate",
+    title: "Uygulamanın Yıldızı",
   },
 ];
 const Container = styled.div`
@@ -58,7 +58,7 @@ const StatsTitle = styled.h1`
   }
 `;
 const StatsSubTitle = styled.h1`
-  font-size: 25px;
+  font-size: 22px;
   font-family: "RegularNetflix";
   @media screen and (max-width: 768px) {
     font-size: 18px;
@@ -77,17 +77,21 @@ function Statistics() {
         gutter={[48, 48]}
         align="center"
         justify="space-between"
-        style={{ width: "100%", height: "fit-content" }}
+        style={{ width: "100%" }}
       >
-        {Stats.map((res) => (
+        {Stats.map((res, index) => (
           <>
             <Col
-              key={res.id}
+              key={index}
               lg={6}
               sm={8}
               xs={12}
               align="center"
-              style={{ borderRight: "2px solid #643fdb" }}
+              style={
+                index === 3
+                  ? { borderRight: "none" }
+                  : { borderRight: "0px solid #643fdb" }
+              }
             >
               {" "}
               <StatsTitle>{res.data}</StatsTitle>

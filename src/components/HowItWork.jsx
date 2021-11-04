@@ -13,38 +13,38 @@ const Arr = [
   {
     id: 1,
     img: icon1,
-    title: "Match Making",
-    desc: "The first step you will do is press 'Add' from the toolbar to choose Reserve  match or Find a team to play with or Start Activity Llike Running .",
+    title: "Maç Rezerve Et",
+    desc: "İlk adım + butonuna tıklayarak tüm sahayı rezerve edebilirsiniz veya takım olarak sisteme giriş yapabilirsiniz.",
   },
   {
     id: 2,
     img: icon2,
-    title: "Select Sport",
-    desc: "The second step is to choose your favorite sport, whether football, paintball, lasertag or karting, to start playing it with your friends.",
+    title: "Spor Branşını Seç",
+    desc: "İkinci adım ise yapmak istediğiniz sporu seçebilirsiniz.(Futbol, paintball, lasertag, karting)",
   },
   {
     id: 3,
     img: icon3,
-    title: "choose Time , Date , Location",
-    desc: "Third is to choose the right days and time to search for the nearest available date for booking, and you can also search and see the nearest facilities available near you",
+    title: "Tarihi ve Zamanı Seç",
+    desc: "Müsait olduğunuz zamanı, gidebileceğiniz yeri ve tarihi seçebilirsiniz!",
   },
   {
     id: 4,
     img: icon4,
     title: "Choose Facilty",
-    desc: "After that , it will show you the nearest facilities in terms of dates and locations, and you can view each facility and see the available features, price and all the information about it and book it .",
+    desc: "Önünüze çıkan spor tesislerinden birini seçmek için hazırsınız. İstediğiniz özellikleri filtreleyerek sana uygun olan sahayı bulabilirsiniz! ",
   },
   {
     id: 5,
     img: icon5,
     title: "Invite Freinds",
-    desc: "You can then add your own friends on the App or from abroad and send them invitations to join you to play.",
+    desc: "Oynamak istediğiniz arkadaşlarınızı takıma dahil edebilirsiniz!",
   },
   {
     id: 6,
     img: icon6,
     title: "payment",
-    desc: "The last step you will take is to choose the payment method, whether it is iyzico, MasterCard or Visa , To complete the booking process",
+    desc: "Son adım ise iyzico ile kredi kartı ile ödeme yapabilirsiniz!",
   },
 ];
 const Container = styled.div`
@@ -66,7 +66,7 @@ const Header = styled.div`
   align-items: center;
   justify-content: center;
 `;
-const HowItWorksTitle = styled.h1`
+const HowItWorksTitle = styled.span`
   font-size: 30px;
   color: #1c1243;
   font-family: "MediumNetflix";
@@ -100,12 +100,13 @@ function HowItWork() {
   return (
     <Container>
       <Header>
-        <HowItWorksTitle>HOW IT WORK</HowItWorksTitle>
+        <HowItWorksTitle>NASIL ÇALIŞIR</HowItWorksTitle>
         <Divider src={divider} />
       </Header>
       <SubTitle>
-        Want to learn more about how the Spot App can help you book or join your
-        match ? Follow these steps to find out what our app is all about
+        Sporsepetinde maç rezervasyonu yapmanıza yardımcı olabilecek daha fazla
+        bilgi edinmek ister misiniz? Uygulamamızın ne hakkında olduğunu öğrenmek
+        için bu adımları izleyebilirsiniz!
       </SubTitle>
       <Row gutter={[32, 32]} style={{ marginTop: "32px" }}>
         {Arr.map((res) => (
@@ -117,7 +118,7 @@ function HowItWork() {
                 flexDirection: "row",
               }}
             >
-              <img width="50px" src={res.img} />
+              <img width="50px" src={res.img} style={{ marginTop: "0" }} />
               <Col>
                 <CardTitle>{res.title}</CardTitle>
                 <CardDesc>{res.desc}</CardDesc>
