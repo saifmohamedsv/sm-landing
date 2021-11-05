@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import divider from "../assets/icons/divider.png";
 import styled from "styled-components";
 import testImage from "../assets/photos/TestimonialPic.png";
@@ -67,6 +67,7 @@ const CarouselContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   @media screen and (max-width: 768px) {
+    top: 15%;
     padding: 12px;
     gap: 12px;
     width: 100%;
@@ -100,6 +101,9 @@ const UserCard = styled.div`
 function Testimonials() {
   const [carousel, setCarousel] = useState(1);
   const [active, setActive] = useState(images[0]);
+  const [mobileV, setActiveMenu] = useState(false);
+  const [screenSize, setScreenSize] = useState(null);
+
   const length = images.length;
   const nextSlide = () => {
     setCarousel(carousel === length - 1 ? 0 : carousel + 1);
@@ -110,6 +114,20 @@ function Testimonials() {
   const onSelect = (index) => {
     setCarousel(index);
   };
+
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  useEffect(() => {
+    if (screenSize < 768) {
+      setActiveMenu(true);
+    } else {
+      setActiveMenu(false);
+    }
+  }, [screenSize]);
   if (!Array.isArray(images) || images.length <= 0) {
     return null;
   }
@@ -119,39 +137,76 @@ function Testimonials() {
         <AppScreenShotTitle>What Our Users Say</AppScreenShotTitle>
         <Divider src={divider} />
       </Header>
-      <CarouselContainer>
-        <LeftCircleFilled
-          style={{ fontSize: "32px", color: "#643fdb", userSelect: "none" }}
-          onClick={prevSlide}
-        />
-        {images.map((image, index) => {
-          return (
-            <>
-              {index === carousel && (
-                <Card
-                  key={index}
-                  onClick={() => {
-                    onSelect(index);
-                  }}
-                >
-                  <TestiDesc>
-                    Çok güzel düşünülmüş, umarım fikir hayata geçtiğinde de
-                    gelişimi sürer
-                  </TestiDesc>
-                  <UserCard>
-                    <h3>{image.name}</h3>
-                    <img src={image.img} width="48px" />
-                  </UserCard>
-                </Card>
-              )}
-            </>
-          );
-        })}
-        <RightCircleFilled
-          style={{ fontSize: "32px", color: "#643fdb", userSelect: "none" }}
-          onClick={nextSlide}
-        />
-      </CarouselContainer>
+      {!mobileV && (
+        <CarouselContainer>
+          <LeftCircleFilled
+            style={{ fontSize: "32px", color: "#643fdb", userSelect: "none" }}
+            onClick={prevSlide}
+          />
+          {images.map((image, index) => {
+            return (
+              <>
+                {index === carousel && (
+                  <Card
+                    key={index}
+                    onClick={() => {
+                      onSelect(index);
+                    }}
+                  >
+                    <TestiDesc>
+                      Çok güzel düşünülmüş, umarım fikir hayata geçtiğinde de
+                      gelişimi sürer
+                    </TestiDesc>
+                    <UserCard>
+                      <h3>{image.name}</h3>
+                      <img src={image.img} width="48px" />
+                    </UserCard>
+                  </Card>
+                )}
+              </>
+            );
+          })}
+          <RightCircleFilled
+            style={{ fontSize: "32px", color: "#643fdb", userSelect: "none" }}
+            onClick={nextSlide}
+          />
+        </CarouselContainer>
+      )}
+      {mobileV && (
+        <CarouselContainer>
+          <LeftCircleFilled
+            style={{ fontSize: "24px", color: "#643fdb", userSelect: "none" }}
+            onClick={prevSlide}
+          />
+          {images.map((image, index) => {
+            return (
+              <>
+                {index === carousel && (
+                  <Card
+                    key={index}
+                    onClick={() => {
+                      onSelect(index);
+                    }}
+                  >
+                    <TestiDesc>
+                      Çok güzel düşünülmüş, umarım fikir hayata geçtiğinde de
+                      gelişimi sürer
+                    </TestiDesc>
+                    <UserCard>
+                      <h3>{image.name}</h3>
+                      <img src={image.img} width="48px" />
+                    </UserCard>
+                  </Card>
+                )}
+              </>
+            );
+          })}
+          <RightCircleFilled
+            style={{ fontSize: "24px", color: "#643fdb", userSelect: "none" }}
+            onClick={nextSlide}
+          />
+        </CarouselContainer>
+      )}
     </Container>
   );
 }

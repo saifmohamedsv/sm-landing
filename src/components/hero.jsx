@@ -81,10 +81,10 @@ const Button = styled.button`
   border: 1px solid #fff;
   transition: all ease-in-out 0.4s;
   cursor: pointer;
-  &:hover {
+  /* &:hover {
     background-color: transparent;
     color: #fff;
-  }
+  } */
   @media screen and (max-width: 768px) {
     margin-top: 12px;
     max-width: 180px;
@@ -103,7 +103,7 @@ function hero() {
       <Gradient />
       <ContentContainer>
         <HeroData>
-          <HeroName>Sports Sporsepeti</HeroName>
+          <HeroName>Sporsepeti</HeroName>
           <HeroTitle>
             Spor Tesisleri ile Spor Yapmak İsteyenleri Bir Araya Getiren
             Uygulama

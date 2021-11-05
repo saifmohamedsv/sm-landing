@@ -143,12 +143,9 @@ function Navbar() {
       )}
       {mobActive && (
         <MobileLinksContainer>
-          <Link href="/">home</Link>
-          <Link href="#About">about</Link>
-          <Link href="#Contact">contact us</Link>
-          <a href="">
-            <Button>Sign In</Button>
-          </a>
+          <Link href="/">Anasayfa</Link>
+          <Link href="#About">Hakkımızda</Link>
+          <Link href="#Contact">İletişim</Link>
         </MobileLinksContainer>
       )}
     </Container>

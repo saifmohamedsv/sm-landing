@@ -97,7 +97,7 @@ function AppScreenShot() {
   const [mobileV, setActiveMenu] = useState(false);
   const [screenSize, setScreenSize] = useState(null);
 
-  const [carousel, setCarousel] = useState(0);
+  const [carousel, setCarousel] = useState(2);
   const length = images.length;
 
   const nextSlide = () => {

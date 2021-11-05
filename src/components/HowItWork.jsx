@@ -118,7 +118,7 @@ function HowItWork() {
                 flexDirection: "row",
               }}
             >
-              <img width="50px" src={res.img} style={{ marginTop: "0" }} />
+              <img width="50px" src={res.img} style={{ marginTop: "12px" }} />
               <Col>
                 <CardTitle>{res.title}</CardTitle>
                 <CardDesc>{res.desc}</CardDesc>

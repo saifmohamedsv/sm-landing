@@ -12,7 +12,7 @@ const Stats = [
     img: football,
     title: "Football",
     subtitle:
-      "Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor coli incididunt ut labore Lorem",
+      "Halısaha maçları herkesin vazgeçilmezidir! Sen sadece boş zamanlarını yaz, organizasyonu biz halledelim!",
     height: "100%",
     width: "100%",
   },
@@ -20,33 +20,26 @@ const Stats = [
     id: 2,
     img: paintball,
     title: "Paintball",
-    // height: "55px",
-    // width: "46px",
     height: "100%",
 
     subtitle:
-      "Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor coli incididunt ut labore Lorem",
+      "Takım sporları arasındaki en keyifli branşlardan biri! Aman aynı takımdaki arkadaşınızı vurmayın",
   },
   {
     id: 3,
     img: karting,
     title: "Karting",
-    // height: "55px",
-    // width: "80px",
-    // height: "55px",
     width: "110%",
     subtitle:
-      "Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor coli incididunt ut labore Lorem",
+      "İstediğin karting pistine başkaları ile yarışmak için katılabilirsin! Sürelerini kaydederek yarış çizgini daha da geliştirmek senin elinde!",
   },
   {
     id: 4,
     img: lasertag,
     title: "Laser Tag",
-    // height: "55px",
-    // width: "46px",
     height: "100%",
     subtitle:
-      "Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor coli incididunt ut labore Lorem",
+      "Counter-Strike demode oldu! Gerçek hayattaki call-of, cs oynamak için hemen rezervasyonunu gerçekleştirmelisin!",
   },
 ];
 const Gradient = styled.div`
@@ -131,6 +124,7 @@ const SubTitle = styled.p`
 const Card = styled.div`
   width: 100%;
   max-width: 280px;
+  min-height: 400px;
   padding: 48px 12px;
   background-color: #fff;
   display: flex;
@@ -145,6 +139,7 @@ const Card = styled.div`
   @media screen and (max-width: 768px) {
     width: 100%;
     max-width: 100%;
+    min-height: 220px;
     padding: 12px;
     gap: 12px;
   }
@@ -187,13 +182,12 @@ function Sports() {
       <Gradient />
       <ContentContainer>
         <Header>
-          <SportsTitle>SUPPORTED SPORTS</SportsTitle>
+          <SportsTitle>DESTEKLENEN SPORLAR</SportsTitle>
           <Divider src={divider} />
         </Header>
         <SubTitle>
-          Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor coli incididunt ut labore Lorem ipsum madolor sit amet,
-          consectetur adipisicing incididunt.
+          Aşağıdaki spor branşlarında spor tesislerinde yer ayırt, maç yap,
+          anılarını paylaş, sosyalleş ve gelişimini istatistiklerden takip et!
         </SubTitle>
 
         <Row

@@ -69,24 +69,24 @@ function Footer() {
           </Row>
         </Col>{" "}
         <Col lg={6} md={8} sm={12} xs={12}>
-          <Logo>Main</Logo>
-          <FooterLink href="">Home</FooterLink>
-          <FooterLink>About Us</FooterLink>
-          <FooterLink>Contact Us</FooterLink>
+          <Logo>Başlıca</Logo>
+          <FooterLink href="">Anasayfa</FooterLink>
+          <FooterLink>Hakkımızda</FooterLink>
+          <FooterLink>İletişim</FooterLink>
         </Col>{" "}
         <Col lg={6} md={8} sm={12} xs={12}>
-          <Logo>Legal</Logo>
-          <FooterLink>Privacy Policy </FooterLink>
-          <FooterLink>Termes & Condintions</FooterLink>
-          <FooterLink>FAQs</FooterLink>
+          <Logo>Yasal</Logo>
+          <FooterLink>Gizlilik Politikası</FooterLink>
+          <FooterLink>Şartlar Ve Koşullar</FooterLink>
+          <FooterLink>SSS</FooterLink>
         </Col>{" "}
         <Col lg={6} md={8} sm={12} xs={12}>
-          <Logo>Support</Logo>
-          <FooterLink>+0975 2105 1245</FooterLink>
-          <FooterLink>Villa Medici, Yorba Linda, CA 92886, USA</FooterLink>
+          <Logo>Yardım</Logo>
+          <FooterLink>+90 531 497 19 15</FooterLink>
+          <FooterLink>Bilişim Vadisi Açık alan No: 75 İstanbul, TR</FooterLink>
         </Col>{" "}
         <Col lg={6} md={8} sm={12} xs={12}>
-          <Logo>Mobile app</Logo>
+          <Logo>Mobil uygulama</Logo>
           <img src={GooglePlay} style={DownloadsClass} />
           <img src={AppleStore} style={DownloadsClass} />
         </Col>
